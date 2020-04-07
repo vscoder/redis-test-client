@@ -1,0 +1,14 @@
+{
+  "name": "redis_test",
+  "version": "1.0.0",
+  "description": "Node.js test for Redis",
+  "author": "logdnalf",
+  "main": "test.js",
+  "scripts": {
+    "start": "node test.js"
+  },
+  "dependencies": {
+    "ioredis": "^4.16.0",
+    "sprintf-js": "^1.1.2"
+  }
+}
