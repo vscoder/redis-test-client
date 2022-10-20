@@ -9,8 +9,7 @@ import traceback
 
 import redis
 
-sentinel = Sentinel([('rfs-ldrs', 26379)], socket_timeout=1)
-master = sentinel.master_for('mymaster', socket_timeout=1, retry_on_timeout=True)
+master = redis.Redis(host='redis-master', port=6379, db=0)
 
 key = socket.gethostname()
 counter = 0
