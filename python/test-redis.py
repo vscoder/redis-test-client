@@ -10,7 +10,7 @@ import traceback
 import redis
 
 master = redis.Redis(host='redis-master', port=6379, db=0)
-master.auth(testadmin)
+master.auth("testadmin")
 
 key = socket.gethostname()
 counter = 0
