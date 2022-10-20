@@ -46,6 +46,8 @@ while True:
   try:
     master.incr(key)
     counter += 1
+  except redis.exceptions.AuthenticationError:
+    master.auth("testadmin")
   except:
     print("Exception in INCR:", file=sys.stderr)
     print('-'*60, file=sys.stderr)
